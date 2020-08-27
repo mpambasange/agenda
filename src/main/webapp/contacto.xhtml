@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Novo Contacto</title>
+    </h:head>
+    <h:body>
+        <h:form>  
+            <h:panelGrid columns="2">
+                
+                 <h:outputLabel value="Nome" for="nome"/>
+                 <h:inputText id="nome" value="#{contactoFMBean.contacto.nome}"/>
+                 
+                 <h:outputLabel value="Sobrenome" for="sobrenome"/>
+                 <h:inputText id="sobrenome" value="#{contactoFMBean.contacto.sobrenome}"/>
+                 
+                 <h:outputLabel value="Email" for="email"/>
+                 <h:inputText id="email" value="#{contactoFMBean.contacto.email}"/>
+                 
+                 <h:outputLabel value="Telefone" for="telefone"/>
+                 <h:inputText id="telefone" value="#{contactoFMBean.contacto.telefone}"/>
+            
+            </h:panelGrid>
+            
+            <h:commandButton value="Adicionar" action="#{contactoFMBean.guardar}"/>
+            
+        </h:form>     
+        
+           
+                       
+                 
+    </h:body>
+</html>
+
