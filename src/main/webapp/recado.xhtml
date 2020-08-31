@@ -7,33 +7,30 @@
         <title>Facelet Title</title>
     </h:head>
     <h:body>
-        
-        <h2>Exemplos didáticos - SelectOneRadio</h2>
        
-        <h:form>
-            <h:selectOneRadio layout="PageDirection">
-         
-            <f:selectItem itemLabel="Azul" itemValue="azul"/> 
-            <f:selectItem itemLabel="Branco" itemValue="branco"/>
-            <f:selectItem itemLabel="Amarelo" itemValue="amarelo"/> 
-            
-        </h:selectOneRadio>     
-        </h:form>
-        
-        <hr/>
-         
         <h2>Exemplos didáticos - SelectionOneMenu</h2>
         
         <h:form>
-        <h:selectOneMenu>
+            <h:outputLabel value="Municipio:"/>
+            <h:selectOneMenu value="#{recadoCDIBean.recado.municipio}">
             
-            <f:selectItem itemLabel="Azul" itemValue="azul"/> 
-            <f:selectItem itemLabel="Branco" itemValue="branco"/>
-            <f:selectItem itemLabel="Amarelo" itemValue="amarelo"/> 
-            
+            <f:selectItem itemLabel="Luanda" itemValue="luanda"/> 
+            <f:selectItem itemLabel="Viana" itemValue="viana"/>
+            <f:selectItem itemLabel="Cazenga" itemValue="cazenga"/> 
         </h:selectOneMenu> 
-        </h:form>
         
+         <h:commandButton action="#{recadoCDIBean.mostraMunicipio}" value="Enviar">
+            
+            <f:ajax execute="@form" render="@form"/>
+        
+        </h:commandButton>
+      
+        <hr/>                 
+        
+        <h:outputText id="MunicipioEscolhido" value="#{recadoCDIBean.recado.municipio}"/>
+       
+        </h:form>
+      
     </h:body>
 </html>
 

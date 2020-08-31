@@ -18,7 +18,7 @@ import javax.enterprise.context.RequestScoped;
 @RequestScoped
 public class ContactoFMBean {
     
-    Contacto contacto = new Contacto ();
+    Contacto contacto = new Contacto();
 
     @PostConstruct
     public void init () {
